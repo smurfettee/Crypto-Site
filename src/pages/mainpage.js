@@ -1,5 +1,6 @@
 import Buynsell from "../components/Buynsell";
 import ChooseUs from "../components/ChooseUs";
+import Join from "../components/Join";
 import MarketUpdate from "../components/MarketUpdate";
 
 export default function MainPage() {
@@ -8,6 +9,7 @@ export default function MainPage() {
             <Buynsell/>
             <MarketUpdate/>
             <ChooseUs/>
+            <Join/>
         </div>
     );
 }

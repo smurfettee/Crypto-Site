@@ -10,12 +10,6 @@ function App() {
         <Route index element={
           <MainPage/>
         }/>
-
-        <Route path='/about' element={
-          <div className='bg-red'>
-            About page
-          </div>
-        }/>
       </Route>
     </Routes>
   );

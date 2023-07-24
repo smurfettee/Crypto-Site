@@ -25,7 +25,7 @@ export default function MarketUpdate(){
     const currentPosts = coinsData.slice(firstPostIndex, lastPostIndex);
 
     return (
-        <div className="w-1/2 flex flex-col items-center mb-36">
+        <div id="marketUpdate" className="w-1/2 flex flex-col items-center mb-36">
             <div className="self-start text-3xl font-bold text-[#242424] mb-6">MARKET UPDATE</div>
             <div className="w-[100%]">
                 <div className="flex justify-between text-2xl bg-indigo-800 text-white rounded-t-xl p-2 font-medium">
