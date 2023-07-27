@@ -8,7 +8,11 @@ export default function CoinInfo() {
     const [coin, setCoin] = useState(null);
 
     useEffect(() => {
-        fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=${id}&order=market_cap_desc&sparkline=false&locale=en`)
+        fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=${id}&order=market_cap_desc&sparkline=false&locale=en`, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
         .then(response => {
             response.json().then(res => {
                 setCoin(res[0]);
