@@ -16,6 +16,7 @@ export default function MarketUpdate(){
         }).then(response => {
             response.json().then(res => {
                 setCoinsData(res);
+                console.log(res);
             });
         });
     }, []);

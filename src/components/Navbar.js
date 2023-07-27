@@ -1,11 +1,12 @@
 import { Link } from "react-scroll";
+import { Link as LLink } from "react-router-dom";
 
 export default function Navbar() {
     return (
         <div className="flex bg-indigo-800">  
             <div className="w-1/2 flex justify-end">
                 <div className="w-1/2 flex justify-center pt-9 pb-7">
-                    <Link to={'/'} className="text-4xl text-white font-extrabold relative bottom-2 drop-shadow-lg cursor-pointer">Coinsafe</Link>
+                    <LLink to={'/'} className="text-4xl text-white font-extrabold relative bottom-2 drop-shadow-lg cursor-pointer">Coinsafe</LLink>
                 </div>
             </div>
             <div className="w-1/2 flex justify-start">
