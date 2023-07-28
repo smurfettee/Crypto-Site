@@ -32,6 +32,9 @@ export default function CoinGraph({coin}) {
         fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=eur&days=6`, {
             headers: {
                 "Content-Type": "application/json",
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+                'Access-Control-Request-Method': 'GET, POST, DELETE, PUT, OPTIONS',
             },
         }).then(response => {
             response.json().then(res => {

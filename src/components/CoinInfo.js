@@ -11,6 +11,9 @@ export default function CoinInfo() {
         fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=${id}&order=market_cap_desc&sparkline=false&locale=en`, {
             headers: {
                 "Content-Type": "application/json",
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+                'Access-Control-Request-Method': 'GET, POST, DELETE, PUT, OPTIONS',
             },
         })
         .then(response => {
