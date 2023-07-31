@@ -9,9 +9,9 @@ library.add(faTwitter, faFacebook,faWhatsapp, faInstagram, faDiscord, faYoutube)
 export default function Join(){
     return (
         <div className='flex flex-col items-center mb-28'>
-            <div id="join" className="flex items-center">
-                <img className="w-44 mr-12" src="https://cdn-icons-png.flaticon.com/512/5171/5171046.png"></img>
-                <div className="flex flex-col items-center gap-6">
+            <div id="join" className="flex items-center md:flex-col md:m-4">
+                <img className="w-44 mr-12 md:relative md:left-6" src="https://cdn-icons-png.flaticon.com/512/5171/5171046.png"></img>
+                <div className="flex flex-col items-center gap-6 md:mt-16 md:mb-16">
                     <div className="text-6xl font-bold text-[#242424]">Join us via</div>
                     <div className="text-6xl font-bold text-indigo-800">Discord</div>
                     <div className="text-2xl">Invest and manage all your crypto at one place.</div>

@@ -5,7 +5,7 @@ export default function ChooseUs(){
     return (
         <div id="chooseUs" className=" w-3/4  flex flex-col items-center mb-60">
             <div className="m-10 font-bold  text-5xl text-indigo-800">Why Coinsafe?</div>
-            <div className="flex">
+            <div className="flex md:flex-col md:items-center md:[&>div]:w-40">
                 <div className="m-10 flex flex-col items-center w-1/3">
                     <img className="w-44 mb-4" src="https://cdn-icons-png.flaticon.com/512/3437/3437364.png"></img>
                     <div className="mb-2 text-2xl font-medium">Simplicity</div>

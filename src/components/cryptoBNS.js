@@ -35,6 +35,7 @@ export default function CryptoBNS({coin}) {
             
         }).then(response => {
             response.json().then(res => {
+                //console.log(res);
                 setCurrency(res[0].current_price >= 1 ? res[0].current_price : parseFloat(res[0].current_price.toPrecision(2)));
                 setPercentage(res[0].price_change_percentage_1h_in_currency.toFixed(2));
             });
