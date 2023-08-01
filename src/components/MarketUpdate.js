@@ -9,7 +9,7 @@ export default function MarketUpdate(){
     const [postsPerPage, setPostsPerPage] = useState(10);
 
     useEffect(() => {
-        fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&sparkline=false&price_change_percentage=1h&locale=en", {
+        try {fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&sparkline=false&price_change_percentage=1h&locale=en", {
             headers: {
                 "Content-Type": "application/json",
                 'Access-Control-Allow-Origin': '*',
@@ -19,9 +19,12 @@ export default function MarketUpdate(){
         }).then(response => {
             response.json().then(res => {
                 setCoinsData(res);
-                console.log(res);
+                //console.log(res);
             });
         });
+        } catch (error) {
+            console.log(error);
+        }
     }, []);
 
     const lastPostIndex = currentPage * postsPerPage;

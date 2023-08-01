@@ -29,7 +29,7 @@ export default function CoinGraph({coin}) {
     const [coinsData, setCoinsData] = useState(null);
 
     useEffect(() => {
-        fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=eur&days=6`, {
+        try {fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=eur&days=6`, {
             headers: {
                 "Content-Type": "application/json",
                 'Access-Control-Allow-Origin': '*',
@@ -41,6 +41,9 @@ export default function CoinGraph({coin}) {
                 setCoinsData(res.prices);
             });
         });
+        } catch (error) {
+            console.log(error);
+        }
     }, [coin]);
 
 

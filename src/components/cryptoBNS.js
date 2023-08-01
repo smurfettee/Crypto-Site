@@ -25,7 +25,7 @@ export default function CryptoBNS({coin}) {
     const coin_name = coin.charAt(0).toUpperCase() + coin.slice(1);
 
     useEffect(() => {
-        fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=${coin}&sparkline=false&price_change_percentage=1h&locale=en`, {
+        try {fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=${coin}&sparkline=false&price_change_percentage=1h&locale=en`, {
             headers: {
                 "Content-Type": "application/json",
                 'Access-Control-Allow-Origin': '*',
@@ -40,6 +40,9 @@ export default function CryptoBNS({coin}) {
                 setPercentage(res[0].price_change_percentage_1h_in_currency.toFixed(2));
             });
         });
+        } catch (error){
+            console.log(error);
+        }
     }, []);
 
     return (
