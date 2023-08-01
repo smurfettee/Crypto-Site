@@ -28,7 +28,7 @@ export default function CoinInfo() {
         const dayChange = coin.price_change_percentage_24h;
 
         return (
-            <div className="flex gap-10 items-center relative bottom-20">
+            <div className="flex gap-10 items-center relative bottom-20 md:self-start">
                 <div className="flex flex-col items-center">
                     <img  src={coin.image} className="w-56 pb-4"></img>
                     <div className="pb-4 text-3xl text-[#242424] font-semibold">{coin.name}</div>

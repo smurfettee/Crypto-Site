@@ -2,7 +2,7 @@ import MarketUpdateCoin from "./MarketUpdateCoin";
 
 export default function CryptoList({coinsdata}){
     return (
-        <div>
+        <div className="md:self-start">
             {
                 coinsdata.map((coin, index) => {
                     return (

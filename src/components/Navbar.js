@@ -3,7 +3,7 @@ import { Link as LLink } from "react-router-dom";
 
 export default function Navbar() {
     return (
-        <div className="flex bg-indigo-800 w-screen">  
+        <div className="flex bg-indigo-800">  
             <div className="w-1/2 flex justify-end md:relative md:right-12">
                 <div className="w-1/2 flex justify-center pt-9 pb-7">
                     <LLink to={'/'} className="text-4xl text-white font-extrabold relative bottom-2 drop-shadow-lg cursor-pointer">Coinsafe</LLink>
